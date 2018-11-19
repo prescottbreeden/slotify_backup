@@ -1,0 +1,182 @@
+.usermenu {
+	display: none;
+	background-color: $color-black-light;
+	position: fixed;
+	top: 4.5rem;
+	right: 2rem;
+	width: 15rem;
+	border: 1px solid rgba($color-black, .15);
+	border-radius: 4px;
+	box-shadow: 0rem 0rem 1rem #000;
+	z-index: 1000;
+
+	&-item {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		box-sizing: border-box;
+		width: 100%;
+		font-size: 1.4rem;
+		color: $color-grey;
+		padding: 1.5rem 2rem;
+
+		&:hover {
+			color: $color-white;
+			cursor: pointer;
+			background-color: rgba($color-grey, .4);
+		}
+	}
+
+
+}
+
+.top-bar {
+	position: fixed;
+	top: 0;
+	left: 25rem;
+	right: 0;
+	z-index: 1000;
+	padding: 1rem 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: $color-gradient-top;
+	height: 3rem;
+
+	&__nav-btn {
+		display: flex;
+		height: 100%;
+
+		&--btn {
+		}
+	}
+
+	&__icon {
+		height: 2rem;
+		width: 2rem;
+		fill: $color-grey;
+		cursor: pointer;
+		margin-right: 1rem;
+
+		&:hover {
+			fill: $color-white;
+		}			  
+	}
+
+	&__nav-box {
+		display: flex;
+		align-items: center;
+	}
+
+	&__search {
+		display: flex;
+
+		&--input {
+			width: 15rem;
+			border-radius: 200px;
+			padding: 0 1rem;
+		}
+	}
+
+	&__user-menu {
+		display: flex;
+		align-item: center;
+	}
+
+	&__user-info {
+		display: flex;
+		align-items: center;
+		height: 2.5rem;
+
+		&:hover {
+			cursor: pointer;
+		}
+
+		&:hover &--username {
+			border-bottom: 1px solid white;
+		}
+
+		&--avatar {
+			margin-right: 1rem;
+			border-radius: 50%;
+			height: 2.3rem;
+			width: 2.3rem;
+		}
+
+		&--username {
+			margin-right: 1rem;
+			font-size: 1.2rem;	
+			border-bottom: 1px solid transparent;
+			letter-spacing: 1px;
+			color: $color-white;
+		}
+	}
+
+	&__menu {
+		height: 2.5rem;
+		width: 2rem;
+		fill: $color-white;
+		cursor: pointer;
+	}
+}
+
+.search {
+    flex: 0 0 40%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	width: 35rem;
+
+
+    // @media only screen and (max-width: $bp-smallest) {
+    //     order: 1;
+    //     flex: 0 0 100%;
+    //     background-color: var(--color-grey-light-2);
+    // }
+
+    &__input {
+        font-family: inherit;
+        font-size: inherit;
+        background-color: $color-white;
+        border: none;
+        border-radius: 200px;
+        padding: .7rem 2rem;
+        width: 90%;
+        transition: all .2s;
+        margin-right: -3.25rem;
+
+        &:focus {
+            outline: none;
+            width: 100%;
+            background-color: $color-white;
+        }
+
+        &::-webkit-input-placeholder {
+            font-weight: 100;
+            color: $color-grey;
+        }
+    }
+
+    &__input:focus + &__button {
+        background-color: $color-white;
+    }
+
+    &__button {
+        border: none;
+        background-color: $color-white;
+
+        &:focus {
+            outline: none;
+        }
+        &:active {
+            transform: translateY(2px);
+        }
+    }
+
+    &__icon {
+        height: 1.5rem;
+        width: 1.5rem;
+        fill: $color-grey-dark;
+    }
+}

@@ -1,0 +1,32 @@
+.artist {
+	min-height: 100%;
+	@include gradient;
+	display: block;
+	padding: 2rem;
+	cursor: default;
+	padding-bottom: 20rem;
+
+	&__center-section {
+		text-align: center;
+	}
+
+	&__info {
+
+		padding-top: 2rem;
+
+		&--name {
+			font-size: 4rem;
+		}
+	}
+
+	&__header-btn {
+
+		&--btn {
+			@include btn;
+			@include green-play;
+			width: inherit;
+			padding: 1.5rem;
+			font-size: 1.3rem;
+		}
+	}
+}

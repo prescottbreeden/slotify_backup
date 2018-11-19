@@ -1,0 +1,244 @@
+.no-mobile {
+	height: 100vh;
+	width: 100vw;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(#333, .8);
+	z-index: 2000;
+	display: none;
+
+	&__message {
+		padding: 3rem 5rem;
+		margin: 0 auto;
+		background-color: #333;
+		text-align: center;
+		font-size: 2rem;
+	}
+}
+.easter-egg {
+	cursor: pointer;
+	transition: all .5s;
+	backface-visibility: none;
+
+	&:hover {
+		text-decoration: underline;
+	}
+
+}
+
+.megaman {
+	background-image: linear-gradient(to bottom,
+									rgba($color-black, .7),
+									rgba($color-black, .7)),
+									url('../images/megaman1.jpg');
+}
+.zelda {
+	background-image: linear-gradient(to bottom,
+									rgba($color-black, .7),
+									rgba($color-black, .7)),
+									url('../images/master_sword.jpg');
+}
+.tetris {
+	background-image: linear-gradient(to bottom,
+									rgba($color-black, .7),
+									rgba($color-black, .7)),
+									url('../images/tetris.png');
+}
+.mario {
+	background-image: linear-gradient(to bottom,
+									rgba($color-black, .7),
+									rgba($color-black, .7)),
+									url('../images/mario.jpg');
+}
+.contra {
+	background-image: linear-gradient(to bottom,
+									rgba($color-black, .7),
+									rgba($color-black, .7)),
+									url('../images/contra.jpg');
+}
+.streetfighter {
+	background-image: linear-gradient(to bottom,
+									rgba($color-black, .7),
+									rgba($color-black, .7)),
+									url('../images/streetfighter.jpg');
+}
+
+.register {
+	cursor: default;
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	z-index: 1001;
+	background-position: center;
+	background-size: cover;
+
+	display: table;
+	height: 100vh;
+	width: 100vw;
+	display: relative;
+
+	&__container {
+		font-size: 2rem;
+		//line-height: 1em;
+		width: 90%;
+		margin: 0 auto;
+		margin-top: 15rem;
+		max-width: 120rem;
+		position: absolute;
+		top: 25%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		display: flex;
+		justify-content: space-around;
+    align-content: center;
+    align-items: center;
+	}
+
+	&__login {
+		// display: flex;
+		// flex-direction: column;
+		// justify-content: center;
+		margin-top: 2.5rem;
+		width: 40rem;
+		padding: 4.5rem;
+		border-right: 1px solid $color-grey;
+
+		&--form {
+			display: none;
+		}
+
+		&--heading {
+			text-align: center;
+		}
+
+		&--btn {
+			background-color: transparent;
+			border: 1px solid $color-white;
+			border-radius: 200px;
+			color: $color-white;
+			display: block;
+			font-size: 1.4rem;
+			letter-spacing: 2px;
+			margin: 20px auto;
+			height: 4rem;
+			width: 100%;
+			text-transform: uppercase;
+			transition: all .3s;
+
+			&:hover {
+				cursor: pointer;
+				background-color: $color-green;
+			}
+
+      &-guest {
+        background-color: rgba($color-black, .5);
+        border: 1px solid $color-black;
+        // border-radius: 200px;
+        color: $color-white;
+        display: block;
+        font-size: 1.4rem;
+        letter-spacing: 2px;
+        // margin: 20px auto;
+        height: 4rem;
+        width: 100%;
+        text-transform: uppercase;
+        transition: all .3s;
+
+        &:hover {
+          cursor: pointer;
+          background-color: $color-green;
+        }
+
+      }
+		}
+
+		&--has-account-text {
+			font-weight: bold;
+			font-size: 1.2rem;
+			text-align: center;
+			transition: all .3s;
+
+			&:hover {
+				cursor: pointer;
+				color: $color-green;
+			}
+		}
+
+		::placeholder {
+			font-weight: 300;
+			font-size: 1.2rem;
+			letter-spacing: 1px;
+			color: $color-white;
+			opacity: 1;
+		}
+
+		:-ms-input-placeholder {
+			color: $color-white;
+			opacity: 1;
+		}
+
+		::-ms-input-placeholder {
+			color: $color-white;
+		}
+
+		label {
+			display: block;
+			color: $color-grey;
+			font-size: 1.5rem;
+			margin-top: 2rem;
+		}
+
+		input[type='text'],
+		input[type='email'],
+		input[type='password'] {
+			display: block;
+			background-color: transparent;
+			border: 0;
+			border-bottom: 1px solid $color-white;
+			height: 2.7rem;
+			line-height: 2.7rem;
+			width: 100%;
+			color: $color-white;
+		}
+	}
+
+	&__promo-text {
+		padding: 4.5rem;
+		// display: table-cell;
+    // vertical-align: center;
+
+		&--heading {
+			color: $color-green;
+			font-size: 6rem;
+			font-weight: bold;
+		}
+
+		&--sub-heading {
+			margin: 3.5rem 0;
+		}
+
+		&--list {
+			padding: 0;
+		}
+
+		&--item {
+			list-style: none;
+			font-size: 2rem;
+			display: flex;
+			align-items: center;
+			margin: .7rem;
+		}
+
+		&--icon {
+			height: 2rem;
+			width: 2rem;
+			fill: $color-green;
+			margin-right: 1rem;
+		}
+	}
+}

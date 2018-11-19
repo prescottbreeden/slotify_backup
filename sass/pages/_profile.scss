@@ -1,0 +1,32 @@
+.profile {
+	box-sizing: border-box;
+	padding: 3rem;
+	width: 100%;
+	text-align: center;
+
+	&__image {
+		margin-bottom: 3rem;
+
+		img {
+			max-height: 20rem;
+			max-width: 20rem;
+			 border-radius: 50%;
+		}
+	}
+
+	&__fullname {
+		font-size: 3rem;
+	}
+
+	&__edit-btn {
+		@include btn;
+		width: 20%;
+		margin: 3rem auto;
+	}
+
+	&__logout-btn {
+		@include btn;
+		width: 20%;
+		margin: 3rem auto;
+	}
+}

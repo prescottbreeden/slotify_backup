@@ -1,0 +1,126 @@
+.dropdown-menu {
+}
+.facebook-icon {
+//	fill: #3b5998 !important;
+	fill: #08a0e9 !important;
+}
+
+.twitter-icon {
+	fill: #08a0e9 !important;
+}
+
+.linkedin-icon {
+//	fill: #0e76a8 !important;
+	fill: #08a0e9 !important;
+}
+
+.playlists-menu {
+	display: none;
+	box-sizing: border-box;
+	position: fixed;
+	top: 0;
+	z-index: 2000;
+	background-color: $color-black-light;
+	width: 20rem;
+	border: 1px solid rgba($color-black, .15);
+	border-radius: 4px;
+	box-shadow: 0rem 0rem 1rem #000;
+	margin-right: -1rem;
+}
+
+.share-menu {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 40rem;
+	background-color: $color-black-light;
+	width: 20rem;
+	border: 1px solid rgba($color-black, .15);
+	border-radius: 4px;
+	box-shadow: 0rem 0rem 1rem #000;
+	margin-right: -1rem;
+	z-index: 2000;
+
+	&__item {
+		display: flex;
+		align-items: center;
+		box-sizing: border-box;
+		width: 100%;
+		font-size: 1.2rem;
+		color: $color-grey;
+		padding: 1.5rem 2rem;
+
+		&--empty {
+			width: 2rem;
+			margin-right: 1rem;
+		}
+
+		svg {
+			margin-right: 1rem;
+			height: 2rem;
+			width: 2rem;
+			fill: $color-grey;
+		}
+
+		&:hover {
+			color: $color-white;
+			cursor: pointer;
+			background-color: rgba($color-grey, .4);
+		}
+
+		&:hover svg {
+			fill: $color-white;
+		}
+	}
+
+}
+.options-menu {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 20rem;
+	background-color: $color-black-light;
+	width: 20rem;
+	border: 1px solid rgba($color-black, .15);
+	border-radius: 4px;
+	box-shadow: 0rem 0rem 1rem #000;
+	z-index: 1000;
+
+	&:hover {
+	}
+
+	&__input {
+		display: none;
+	}
+
+	&__divider {
+		border-top: 1px solid rgba($color-grey, .2);
+	}
+}
+
+.menu-item {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	box-sizing: border-box;
+	width: 100%;
+	font-size: 1.2rem;
+	color: $color-grey;
+	padding: 1.5rem 2rem;
+
+	svg {
+		height: 2rem;
+		width: 2rem;
+		fill: $color-grey;
+	}
+
+	&:hover {
+		color: $color-white;
+		cursor: pointer;
+		background-color: rgba($color-grey, .4);
+	}
+
+	&:hover svg {
+		fill: $color-white;
+	}
+}

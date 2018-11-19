@@ -1,0 +1,52 @@
+.search-page {
+	padding: 0 2rem;
+	backface-visibility: none;
+}
+.searchInput {
+	background-color: transparent;
+	width: 100%;
+	border: none;
+	font-size: 5rem;
+	color: $color-white;
+	text-transform: uppercase;
+
+}
+.searchResultRow {
+	padding: 1.5rem 1rem;
+	display: flex;
+	align-items: center;
+	height: 5rem;
+
+	&:hover {
+		@include list-hover;	
+		cursor: pointer;
+	}
+
+	.artistImage {
+		border-radius: 50%;
+		height: 5rem;
+		width: auto;
+		margin-right: 2rem;
+	}
+
+}
+.artistsContainer {
+	padding-top: 3rem;
+	padding-bottom: 5rem;
+	border-bottom: 1px solid rgba($color-grey-dark, .8);
+	margin-bottom: 3rem;
+}
+
+.artistName {
+	color: $color-white;
+	font-size: 1.6rem;
+	line-height: 5rem;
+
+	&__icon {
+		fill: $color-grey;
+		height: 5rem;
+		width: 5rem;
+		margin-right: 2rem;
+	}
+}
+

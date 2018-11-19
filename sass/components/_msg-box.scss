@@ -1,0 +1,75 @@
+.shake {
+	animation: shaker 1s forwards;
+}
+
+.warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	font-size: 2rem;
+	line-height: 1.5;
+	color: $color-green;
+	background-color: rgba($color-black, .9);
+	border: 1px solid rgba($color-grey, .5);
+	border-radius: 4px;
+	transition: all .5s;
+	opacity: 0;
+	z-index: 3000;
+	margin-top: 1rem;
+	padding: 1rem 4rem;
+	min-width: 10rem;
+	text-align: center;
+	box-shadow: 0 1rem 3rem $color-black;
+	cursor: pointer;
+
+	&__btns {
+		display: flex;
+		justify-content: space-around;
+
+		&--confirm {
+			@include btn;
+			margin-right: 3rem;
+		}
+
+		&--cancel {
+			@include btn;
+		}
+	}
+}
+
+.msg-box {
+	display: none;
+	position: fixed;
+	top: 0;
+	right: 0;
+	font-size: 2rem;
+	line-height: 1.5;
+	color: $color-green;
+	background-color: rgba($color-black, .9);
+	border: 1px solid rgba($color-grey, .5);
+	border-radius: 4px;
+	transition: all .5s;
+	opacity: 0;
+
+
+	z-index: 3000;
+	margin-top: 1rem;
+	padding: 1rem 4rem;
+	min-width: 10rem;
+	text-align: center;
+	box-shadow: 0 1rem 3rem $color-black;
+	cursor: pointer;
+
+	&__icon {
+		position: absolute;
+		top: 0;
+		left: 1rem;
+		color: $color-grey;
+		cursor: pointer;
+
+		&:hover {
+			color: $color-white;
+		}
+	}
+}
+

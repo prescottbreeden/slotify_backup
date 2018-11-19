@@ -1,0 +1,53 @@
+#svg_logo {
+	margin: 0 auto;
+	width: 100%;
+	height: auto;
+}
+
+#bars path {
+	fill: none;
+	stroke: #eee;
+	stroke-width: 20;
+	stroke-miterlimit: 10;
+	opacity: 0;
+}
+
+#bars path:nth-child(even) {
+	animation: bars 2s 1 forwards;
+}
+
+#bars path:nth-child(odd) {
+	animation: bars 3s 1 forwards;
+}
+
+#text path {
+	fill: #eee;
+	stroke: #000;
+	opacity: 0;
+}
+
+#text path:nth-child(1) {
+	animation: bounce .5s 0s 1 forwards linear;
+}
+#text path:nth-child(2) {
+	animation: bounce .5s .15s 1 forwards linear;
+}
+#text path:nth-child(3) {
+	animation: bounce .5s .3s 1 forwards linear;
+}
+#text path:nth-child(4) {
+	animation: bounce .5s .45s 1 forwards linear;
+}
+#text path:nth-child(5) {
+	animation: bounce .5s .60s 1 forwards linear;
+}
+#text path:nth-child(6) {
+	animation: bounce .5s .75s 1 forwards linear;
+}
+#text path:nth-child(7) {
+	animation: bounce .5s .90s 1 forwards linear;
+}
+#text path:nth-child(8) {
+	animation: bounce .5s 1.05s 1 forwards linear;
+}
+

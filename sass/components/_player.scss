@@ -1,0 +1,285 @@
+.saved {
+	position: absolute;
+	top: 0;
+	right: -3rem;
+	display: none;
+	fill: $color-green !important;
+
+	&:hover {
+		cursor: pointer;
+	}
+}
+.not-saved {
+	position: absolute;
+	top: 0;
+	right: -3rem;
+	display: none;
+
+	&:hover {
+		cursor: pointer;
+	}
+}
+.delete {
+	position: absolute;
+	top: 0;
+	right: -3rem;
+	display: none;
+
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+.button-active {
+	fill: $color-green !important;
+}
+
+.player {
+	width: 100%;
+	background-color: $color-black-light;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+
+	&__play-bar {
+		height: 6rem;
+		padding: 1.6rem;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		&--album {
+			width: 30%;	
+		}
+
+		&--controls {
+			width: 40%;
+			max-width: 70rem;
+			display: flex;
+			flex-direction: column;
+		}
+
+		&--volume {
+			width: 30%;
+			display: flex;
+			align-items: center;
+		}
+
+		// container for progress bar
+		&--progress-bar {
+			margin-top: 1rem;
+			display: flex;	
+			align-items: center;
+		}
+	}
+
+	&__album {
+		position: relative;
+		height: 100%;
+		display: flex;
+
+		&__link {
+			vertical-align: middle;
+
+			&--artwork {
+				height: 5.5rem;
+				width: 5.5rem;
+				margin-right: 1.5rem;
+				background-size: cover;
+			}
+		}
+
+		&__info {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+
+			&--track {
+				display: flex;
+				align-items: center;
+				margin-bottom: .5rem;
+				height: 2rem;
+				position: relative;
+
+				&-name {
+					font-size: 1.2rem;
+
+					&:hover {
+						cursor: pointer;
+						text-decoration: underline;
+					}
+				}
+
+				&-icon {
+					margin-left: 1.5rem;
+					height: 2rem;
+					width: 2rem;
+					fill: $color-white;
+
+					&:hover {
+						cursor: pointer;
+					}
+				}
+			}
+
+			&--artist-name {
+				display: inline-block;
+				color: $color-grey;
+
+				&:hover {
+					color: $color-white;
+					cursor: pointer;
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}
+
+
+.progress-bar {
+	width: 100%;
+	height: 1rem;
+	display: flex;
+	cursor: pointer;
+
+	&__time {
+		font-size: 1rem;
+		text-align: center;
+		letter-spacing: 1px;
+
+		&--current {
+			margin-right: 1rem;
+		}
+
+		&--remaining {
+			margin-left: 1rem;
+		}
+	}
+
+	&__bg {
+		align-self: center;
+		height: .4rem;
+		width: 100%;
+		background-color: $color-grey;
+		border-radius: 200px;
+		display: flex;
+		align-items: center;
+		backface-visibility: none;
+	}
+
+	&__progress {
+		background-color: $color-white;
+		height: .4rem;
+		width: 0;
+		border-radius: 200px;
+		position: relative;
+		backface-visibility: none;
+
+		&--dot {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			margin: auto 0;
+			opacity: 0;
+			height: .9rem;
+			width: .9rem;
+			border-radius: 50%;
+			background-color: $color-white;
+		}
+
+	}
+
+	&__progress:hover,
+	&__progress--dot:hover,
+	&__bg:hover &__progress--dot {
+		opacity: 1;
+	}
+}
+
+.u-nudge-right {
+	margin-right: -.5rem;
+}
+
+.controls {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto;
+
+	svg {
+		fill: $color-grey;
+
+		&:hover {
+			fill: white;
+			cursor: pointer;
+		}
+	}
+
+	&__shuffle {
+		height: 2rem;
+		width: 2rem;
+		margin: 0 3rem;
+	}
+
+	&__back {
+		height: 2rem;
+		width: 2rem;
+		margin: 0 1.5rem;
+	}
+
+	&__play {
+		height: 3rem;
+		width: 3rem;
+		margin: 0 1.5rem;
+
+		&:hover {
+			transform: scale(1.1);
+		}
+	}
+
+	&__pause {
+		fill: $color-white !important;
+		height: 3rem;
+		width: 3rem;
+		display: none;
+		margin: 0 1.5rem;
+
+		&:hover {
+			transform: scale(1.1);
+		}
+	}
+
+	&__fwd {
+		height: 2rem;
+		width: 2rem;
+		margin: 0 1.5rem;
+	}
+
+	&__repeat {
+		height: 2rem;
+		width: 2rem;
+		margin: 0 3rem;
+	}
+}
+
+.volume {
+	width: 20rem;
+	position: absolute;
+	right: 0;
+
+	&__bar {
+		display: flex;
+		align-items: center;
+		margin-right: 2rem;
+
+		&--icon {
+			margin-right: 1rem;
+			height: 2rem;
+			width: 2rem;
+			fill: $color-grey;
+		}
+	}
+}

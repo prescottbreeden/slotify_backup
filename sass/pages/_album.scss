@@ -1,0 +1,170 @@
+.album-menu {
+
+	&__item {
+		display: none;
+		position: absolute;
+		top: 4rem;
+		left: 0;
+		width: 20rem;
+		box-sizing: border-box;
+		padding: 1.5rem 2rem;
+		background-color: $color-black-light;
+		border: 1px solid rgba($color-black, .15);
+		border-radius: 4px;
+		box-shadow: 0rem 0rem 1rem #000;
+		font-size: 1.2rem;
+		color: $color-grey;
+		z-index: 1000;
+
+
+		&:hover {
+			color: $color-white;
+			cursor: pointer;
+			background-color: rgba($color-grey, .4);
+		}
+
+	}
+}
+
+.album {
+	min-height: 100%;
+	@include gradient;
+	display: block;
+	padding: 2rem;
+	cursor: default;
+	padding-bottom: 20rem;
+
+	&__header {
+		display: inline-block;
+		width: 100%;
+
+		&--artwork {
+			display: inline-block;
+			width: 18rem;
+			height: 18rem;
+			margin-right: 2rem;
+			vertical-align: bottom;
+			position: relative;
+
+			img {
+				height: 100%;
+				width: 100%;
+			}
+
+			&-hover {
+				display: none;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-color: rgba($color-black, .5);
+				vertical-align: bottom;
+				cursor: pointer;
+			}
+
+			&:hover &-hover {
+				display: inline-block;
+			}
+		}
+
+		&--details {
+			display: inline-block;
+
+			&-miniheader {
+				margin: .5rem 0;
+				text-transform: uppercase;
+				font-size: .95rem;
+				letter-spacing: 1px;
+				color: $color-white;
+			}
+
+			&-title {
+				font-size: 4rem;
+				font-weight: 700;
+			}
+
+			&-artist {
+				margin: 1rem 0;
+
+				&-by {
+					color: $color-grey;
+					margin-right: .2rem;
+				}
+
+				&-name {
+					font-size: 1.2rem;
+
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+
+			}
+
+		}
+
+		&--misc {
+			margin-bottom: 1.5rem;
+			font-size: 1.2rem;
+			color: $color-grey;
+		}
+	}
+
+	&__btn {
+		display: flex;
+		align-items: center;
+
+		p {
+			line-height: 1.5rem;
+		}
+		
+		&--play {
+			@include btn;
+			@include green-play;
+			margin-right: 1.5rem;
+		}
+
+		&--save {
+			@include btn;
+			width: 12%;
+			margin-right: 1.5rem;
+		}
+
+		&--more {
+			background-color: transparent;
+			border-radius: 50%;
+			border: 1px solid $color-white;
+			color: transparent;
+			height: 3rem;
+			width: 3rem;
+			position: relative;
+			transition: all .3s;
+
+				&:hover {
+					background-color: $color-white;
+					cursor: pointer;
+					// transform: rotate(90deg);
+
+					&:after {
+						color: $color-black;
+					}
+				}
+
+			&:after {
+				content: '\2807';
+				font-size: 2rem;
+				color: $color-white;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-30%, -40%);
+
+			}
+		}
+	}
+
+	&__tracks {
+		margin-top: 2rem;
+	}
+}

@@ -1,0 +1,54 @@
+@mixin gradient {
+	background-image: linear-gradient(
+							to bottom, 
+							$color-gradient-top, 
+							$color-gradient-bottom 20%);
+}
+
+@mixin btn {
+	margin: 1rem 0;
+	border: 1px solid $color-grey;
+	padding: .8rem 3rem;
+	min-width: 8rem;
+	color: white;
+	text-align: center;
+	line-height: 1.5rem;
+	border-radius: 200px;
+	font-weight: 600;
+	letter-spacing: 2px;
+	cursor: default;
+	text-transform: uppercase;
+	outline: none;
+	backface-visibility: none;
+
+		&:hover {
+			transform: scale(1.1);
+			border: 1.5px solid #fff;
+		}
+
+		&:active {
+			transform: scale(1);
+			border: 1px solid $color-grey;
+		}
+}
+
+@mixin green-play {
+	background-color: $color-green-light;
+	border: none;
+// 	min-width: 5rem;
+
+	&:hover {
+		transform: scale(1.1);
+		background-color: #34e372;
+		border: none;
+	}
+
+	&:active {
+		transform: scale(1);
+	}
+}
+
+@mixin list-hover {
+	background-color: rgba($color-grey, .2);
+	border-bottom: 1px solid transparent;
+}

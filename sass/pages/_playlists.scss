@@ -1,0 +1,212 @@
+.playlists {
+	padding: 2rem;
+
+	&__container {
+		padding: 1rem 0;
+		padding: 1.5rem 2rem;
+		padding-bottom: 5rem;
+		border-bottom: 1px solid rgba($color-grey-dark, .8);
+		background-color: transparent;
+	}
+
+	&__heading {
+		font-size: 2rem;
+		text-align: center;
+	}
+
+	&__btn {
+		@include btn;
+		// @include green-play;
+		// padding: 1rem;
+		// margin-left: auto;
+		width: 15rem;
+		// margin-top: 2rem;
+		// margin-left: 6rem;
+		// margin: 2rem auto;
+	}
+
+	&__item {
+		display: inline-block;
+		// background-image: contain;
+		margin: 2rem;
+		height: 20rem;
+		width: 20rem;
+		position: relative;
+	}
+}
+
+.playlist {
+	min-height: 100%;
+	@include gradient;
+	display: block;
+	padding: 2rem;
+	cursor: default;
+	padding-bottom: 20rem;
+
+	&__icon {
+		height: 100%;
+		width: 100%;
+		stroke: rgba($color-white, .8);
+		stroke-width: .3px;
+		stroke-dasharray: 80;
+		stroke-dashoffset: 80;
+		fill: $color-black;
+		transition: all 5s;
+
+		animation: controller-fill 2.5s 1 forwards;
+
+		&-hover {
+			height: 5rem;
+			width: 5rem;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			fill: $color-white;
+
+			&:hover {
+				cursor: default;
+				background-color: $color-black;
+				border-radius: 50%;
+				transform: translate(-50%, -50%)
+							scale(1.1);
+			}
+		}
+	}
+
+	&__header {
+		display: inline-block;
+		width: 100%;
+
+		&--artwork {
+			display: inline-block;
+			width: 18rem;
+			height: 18rem;
+			vertical-align: bottom;
+			padding: 0 1rem;
+			border: 2px solid $color-grey;
+			border-radius: 4px;
+			position: relative;
+
+			&-hover {
+				display: none;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-color: rgba($color-black, .5);
+				vertical-align: bottom;
+				cursor: pointer;
+
+			}
+
+			&:hover &-hover {
+				display: inline-block;
+			}
+		}
+
+		&--details {
+			display: inline-block;
+		 	margin-left: 2rem;
+
+			&-miniheader {
+				margin: .5rem 0;
+				text-transform: uppercase;
+				font-size: .95rem;
+				letter-spacing: 1px;
+				color: $color-white;
+			}
+
+			&-title {
+				font-size: 4rem;
+				font-weight: 700;
+			}
+
+			&-artist {
+				margin: 1rem 0;
+
+				&-by {
+					color: $color-grey;
+					margin-right: .2rem;
+				}
+
+				&-name {
+					color: $color-white;
+					font-size: 1.2rem;
+
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+
+			}
+
+		}
+
+		&--misc {
+			margin-top: 1rem;
+			margin-bottom: 1.5rem;
+			font-size: 1.2rem;
+			color: $color-grey;
+		}
+	}
+
+	&__btn {
+		display: flex;
+		align-items: center;
+
+		p {
+			line-height: 1.5rem;
+		}
+		
+		&--play {
+			@include btn;
+			@include green-play;
+			margin-right: 1.5rem;
+		}
+
+		&--delete {
+			@include btn;
+			min-width: 12%;
+			margin-right: 1.5rem;
+			
+		}
+
+		&--more {
+			background-color: transparent;
+			border-radius: 50%;
+			border: 1px solid $color-white;
+			color: transparent;
+			height: 3rem;
+			width: 3rem;
+			position: relative;
+			transition: all .3s;
+
+				&:hover {
+					background-color: $color-white;
+					cursor: pointer;
+					transform: rotate(90deg);
+
+					&:after {
+						color: $color-black;
+					}
+				}
+
+			&:after {
+				content: '\2807';
+				font-size: 2rem;
+				color: $color-white;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-30%, -40%);
+
+			}
+		}
+	}
+
+	&__tracks {
+		margin-top: 2rem;
+	}
+}
